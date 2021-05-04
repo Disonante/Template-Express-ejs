@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Bienvenido a la web</h1>
+        <p>Aqui va la introduccion</p>
+    </div>
+
+<h2>Muestra Variable</h2>
+<p><%= tagline %></p>
+
+<ul>
+    <h2>Muestra array</h2>
+    <% mascots.forEach(function(mascot) { %>
+        <li>
+            <strong><%= mascot.name %></strong>
+            representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+        </li>
+    <% }); %>
+</ul>
+
+
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
